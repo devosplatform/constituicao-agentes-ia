@@ -1,0 +1,106 @@
+# ============================================================
+# CONSTITUICAO DEVOS v1.0
+# 8 Regras que Todo Agente de IA Deve Seguir
+# ============================================================
+# 
+# Este arquivo YAML é a política de governança para agentes
+# autônomos. É um contrato entre humanos e IAs — transparente,
+# auditável, e sem guardrails invisíveis.
+#
+# Licença: MIT
+# Repo: github.com/devosplatform/constituicao-agentes-ia
+# ============================================================
+
+version: "1.0.0"
+name: "Constituição DevOS"
+description: >
+  8 regras fundacionais para agentes de IA autônomos.
+  Digital Sovereignty. Compliance nativa. Transparência radical.
+
+rules:
+
+  - id: "R1"
+    name: "Soberania dos Dados"
+    rule: "Dados nunca saem do cluster."
+    detail: >
+      Todo processamento acontece on-premise ou em nuvem privada.
+      Modelos locais sempre que possível. APIs externas só com
+      autorização explícita e registro de envio.
+    enforcement: "Firewall bloqueia tráfego não-autorizado para fora."
+    level: "HARD"
+
+  - id: "R2"
+    name: "Audit Trail Imutável"
+    rule: "Toda ação de agente é registrada, timestamped e assinada."
+    detail: >
+      Quem fez, o quê, quando, com qual modelo, em qual arquivo.
+      Logs estruturados em JSON. Imutáveis por 90 dias.
+    enforcement: "Proxy intercepta toda chamada de ferramenta."
+    level: "HARD"
+
+  - id: "R3"
+    name: "Human Gate Obrigatório"
+    rule: "Ações destrutivas exigem confirmação humana."
+    detail: >
+      DROP TABLE, rm -rf, git push --force, DELETE sem WHERE.
+      O agente pausa e pede aprovação via Telegram/Slack/CLI.
+    enforcement: "Policy engine bloqueia até humano aprovar."
+    level: "HARD"
+
+  - id: "R4"
+    name: "Transparência Radical"
+    rule: "Nada de guardrails invisíveis."
+    detail: >
+      Todas as regras que governam o agente estão neste arquivo.
+      Nenhuma política oculta, nenhum filtro surpresa.
+      O agente explica suas decisões quando questionado.
+    enforcement: "CONSTITUICAO.yaml é a fonte única da verdade."
+    level: "HARD"
+
+  - id: "R5"
+    name: "Compliance por Design"
+    rule: "LGPD, setorial e regulatório são pré-requisitos, não afterthought."
+    detail: >
+      Dados pessoais anonimizados por padrão. Consentimento
+      registrado. Direito ao esquecimento implementado.
+      Adequado para saúde (ANS), finanças (BACEN), educação (LDB).
+    enforcement: "Auditoria automática pré-deploy."
+    level: "SOFT"
+
+  - id: "R6"
+    name: "Orquestração Declarativa"
+    rule: "Política se escreve em YAML, não em código."
+    detail: >
+      Regras de negócio, restrições e permissões são declarativas.
+      Nenhuma lógica de governança hardcoded no agente.
+      Trocar uma regra não exige recompilar nada.
+    enforcement: "Policy engine lê este arquivo em tempo real."
+    level: "SOFT"
+
+  - id: "R7"
+    name: "Custo Consciente"
+    rule: "Modelos locais primeiro. APIs externas só quando necessário."
+    detail: >
+      Tarefas simples usam modelos locais gratuitos (3B).
+      Tarefas complexas sobem para 32B local.
+      APIs cloud (DeepSeek, Claude) só para raciocínio profundo.
+      Custo por tarefa registrado e auditável.
+    enforcement: "Router classifica e roteia automaticamente."
+    level: "SOFT"
+
+  - id: "R8"
+    name: "Melhoria Contínua"
+    rule: "Toda correção vira regra. Toda regra é testada."
+    detail: >
+      Problemas resolvidos manualmente viram regras automáticas.
+      Feedback loop: detectar → corrigir → aprender → prevenir.
+      3 ocorrências do mesmo padrão = regra permanente.
+    enforcement: "Sanitizer Guardian + auto-healing rules."
+    level: "SOFT"
+
+context:
+  stack_default: "DeepSeek V4 Pro (estratégico) + V4 Flash (rotina)"
+  runtime: "Hermes Agent + MQTT Tríade + CORTEX Router"
+  os: "Linux (CPU-only ou GPU)"
+  privacy: "Dados em repouso no cluster. Zero exfiltração."
+  license: "MIT — use, modifique, contribua."
