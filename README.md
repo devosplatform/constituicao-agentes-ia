@@ -6,6 +6,8 @@
 
 **1 arquivo YAML. 8 regras. Governança real para agentes de IA.**
 
+[![Caso real em produção](https://img.shields.io/badge/caso%20real-em%20produ%C3%A7%C3%A3o%2024%2F7-brightgreen)](https://github.com/devosplatform/devos-agent-network)
+
 ---
 
 ## Por que isso existe?
@@ -54,6 +56,16 @@ Este arquivo governa os agentes do **DevOS** — uma plataforma de orquestraçã
 Mas as regras são **universais**. Funcionam para qualquer agente autônomo — CrewAI, AutoGen, LangGraph, ou seu próprio script.
 
 ---
+
+## Caso real em produção
+
+Esta Constituição não é teoria. Ela governa uma rede de **quatro agentes autônomos em produção 24/7** — orquestrador, hub de comunicação, nó de vigilância e servidor de LLM local — com pipeline rodando sem intervenção humana há mais de 30 dias, comunicação por MQTT e governança viva em arquivo versionado.
+
+O caso completo, com harness, arquitetura e o pipeline aberto, está no repositório público da submissão ao hackathon **Google All Things Agentic 2026 — Track 3 (Fortified Enterprise Suite)**:
+
+- **DevOS — Autonomous Enterprise Agent Network** · https://github.com/devosplatform/devos-agent-network
+
+Se você aplicar estas regras em um sistema real, conte o caso em uma issue. A Constituição só vale o que vale em produção — não em slide.
 
 ## Licença
 
